@@ -21,29 +21,27 @@
 
 # Структура проекта
 
-yahoo-finance-parser/
-│
-├── ex00/
-│   └── venv.py                           # Скрипт для проверки активного окружения
-│
-├── ex01/
-│   ├── pies_bars.sh                      # Shell-скрипт для построения графика
-│   └── pies_bars.csv                     # Данные для графика
-│
-├── ex02/
-│   └── librarian.py                      # Скрипт установки библиотек
-│                                         # Зависимости для упражнения
-│
-├── ex03/
-│   └── financial.py                      # Основной парсер Yahoo Finance
-│
-├── ex04/
-│   ├── financial.py                      # Версия с time.sleep(5)
-│   ├── financial_enhanced.py             # Оптимизированная версия (httpx)
-│   ├── profiling-sleep.txt               # Результат с time.sleep()
-│   ├── profiling-tottime.txt             # Результат без time.sleep()
-│   ├── profiling-http.txt                # Сравнение HTTP-библиотек
-│   └── profiling-ncalls.txt              # Сортировка по количеству вызовов
-│
-└── ex05/
-    └── financial_test.py                 # PyTest-тесты для парсера
+1. **ex00/** — Виртуальное окружение
+   - venv.py — скрипт, который проверяет, активировано ли виртуальное окружение, и выводит его путь
+
+2. **ex01/** — Визуализация в терминале
+   - pies_bars.sh — shell-скрипт, который строит график с помощью termgraph
+   - pies_bars.csv — данные для графика (годы и значения)
+
+3. **ex02/** — Управление пакетами
+   - librarian.py — скрипт, который проверяет виртуальное окружение, устанавливает BeautifulSoup и PyTest через requirements.txt, выводит список всех установленных библиотек
+   - requirements.txt — список зависимостей для упражнения (beautifulsoup4, pytest)
+
+4. **ex03/** — Основной парсер
+   - financial.py — принимает тикер (например, MSFT) и название поля (Total Revenue), парсит Yahoo Finance, возвращает кортеж с данными. Добавлен time.sleep(5) для профилирования
+
+5. **ex04/** — Профилирование и оптимизация
+   - financial.py — версия с time.sleep(5) для профилирования
+   - financial_enhanced.py — оптимизированная версия (без sleep, с httpx вместо requests)
+   - profiling-sleep.txt — результат профилирования с time.sleep()
+   - profiling-tottime.txt — результат профилирования без time.sleep()
+   - profiling-http.txt — сравнение HTTP-библиотек (requests vs httpx)
+   - profiling-ncalls.txt — сортировка по количеству вызовов функций
+
+6. **ex05/** — Модульные тесты
+   - financial_test.py — PyTest-тесты для парсера (проверяют корректный ответ, тип возвращаемого значения, обработку ошибок)
