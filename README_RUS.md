@@ -21,28 +21,29 @@
 
 # Структура проекта
 
+yahoo-finance-parser/
 │
-├── ex00/                              # Виртуальное окружение
-│   └── venv.py                        # Скрипт для проверки активного окружения
+├── ex00/
+│   └── venv.py                           # Скрипт для проверки активного окружения
 │
-├── ex01/                              # Визуализация в терминале
-│   ├── pies_bars.sh                   # Shell-скрипт для построения графика
-│   └── pies_bars.csv                  # Данные для графика (годы и значения)
+├── ex01/
+│   ├── pies_bars.sh                      # Shell-скрипт для построения графика
+│   └── pies_bars.csv                     # Данные для графика
 │
-├── ex02/                              # Управление пакетами
-│   ├── librarian.py                   # Скрипт установки библиотек через requirements.txt
-│                                      # Список зависимостей для упражнения
+├── ex02/
+│   └── librarian.py                      # Скрипт установки библиотек
+│                                         # Зависимости для упражнения
 │
-├── ex03/                              
-│   └── financial.py                   # Парсинг финансовых данных с Yahoo Finance
+├── ex03/
+│   └── financial.py                      # Основной парсер Yahoo Finance
 │
-├── ex04/                              # Профилирование и оптимизация
-│   ├── financial.py                   # Версия с time.sleep(5) для профилирования
-│   ├── financial_enhanced.py          # Оптимизированная версия (без sleep, httpx)
-│   ├── profiling-sleep.txt            # Результат профилирования с time.sleep()
-│   ├── profiling-tottime.txt          # Результат профилирования без time.sleep()
-│   ├── profiling-http.txt             # Сравнение HTTP-библиотек (requests vs httpx)
-│   └── profiling-ncalls.txt           # Сортировка по количеству вызовов функций
+├── ex04/
+│   ├── financial.py                      # Версия с time.sleep(5)
+│   ├── financial_enhanced.py             # Оптимизированная версия (httpx)
+│   ├── profiling-sleep.txt               # Результат с time.sleep()
+│   ├── profiling-tottime.txt             # Результат без time.sleep()
+│   ├── profiling-http.txt                # Сравнение HTTP-библиотек
+│   └── profiling-ncalls.txt              # Сортировка по количеству вызовов
 │
-└── ex05/                             
-    └── financial_test.py              # PyTest-тесты для парсера
+└── ex05/
+    └── financial_test.py                 # PyTest-тесты для парсера
