@@ -1,0 +1,15 @@
+Sun May 24 22:55:13 2026    pstats.prof
+
+         1157859 function calls (1123728 primitive calls) in 4.315 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2744 to 5 due to restriction <5>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    330/1    0.013    0.000    4.315    4.315 {built-in method builtins.exec}
+        1    0.000    0.000    4.315    4.315 financial_enhanced.py:1(<module>)
+        1    0.000    0.000    3.699    3.699 financial_enhanced.py:9(financial_info)
+        1    0.000    0.000    3.145    3.145 D:\school21\DSB4_Package_management.ID_1577671-1\src\ex00\jeremyci\Lib\site-packages\httpx\_api.py:174(get)
+        1    0.000    0.000    3.145    3.145 D:\school21\DSB4_Package_management.ID_1577671-1\src\ex00\jeremyci\Lib\site-packages\httpx\_api.py:39(request)
+
+
